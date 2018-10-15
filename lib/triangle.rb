@@ -6,10 +6,11 @@ class Triangle
     @sides << side1
     @sides << side2
     @sides << side3
+    @sides=@sides.sort
   end
 
   def kind
-    if @sides.all?{|side| side >=0}
+    if @sides.all?{|side| side >=0} || @sides[0]+@sides[1] <= @sides[2]
       if @sides.all?{|side| side==@sides[0]}
         :equilateral
       elsif
