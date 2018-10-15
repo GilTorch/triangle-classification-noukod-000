@@ -1,13 +1,20 @@
 class Triangle
   # triangle code
-  attr_accessor :equilateral,:isosceles,:scalene
-
-  def initialize(equilateral,isosceles,scalene)
-    @equilateral=equilateral
-    @isosceles=isosceles
-    @scalene=scalene
+  
+  def initialize(side1,side2,side3)
+    @sides=[] 
+    @sides << side1 
+    @sides << side2 
+    @sides << side3
   end
 
+  def kind  
+    if sides.all?{|side| side >=0}  
+    elsif 
+      raise TriangleError
+    end 
+  end
+ 
   class TriangleError < StandardError
     # triangle error code
   end
