@@ -12,18 +12,19 @@ class Triangle
   end
 
   def kind
-    if @sides.all?{|side| side >=0} || @sides[0]+@sides[1] > @sides[2]
-      if @sides.all?{|side| side==@sides[0]}
-        :equilateral
-      elsif @sides[1]==@sides[2]
-        :isosceles
-      elsif @sides[0]!=@sides[1] && @sides[1]!=@sides[2]
-        :scalene
-      end
-    else
-      raise TriangleError
-    end
-  end
+     if !(@sides.all?{|side| side >=0} || @sides[0]+@sides[1] > @sides[2])
+       raise TriangleError
+     else
+        if @sides.all?{|side| side==@sides[0]}
+         :equilateral
+       elsif @sides[1]==@sides[2]
+         :isosceles
+       elsif @sides[0]!=@sides[1] && @sides[1]!=@sides[2]
+         :scalene
+       end
+     end
+   end
+
 
   class TriangleError < StandardError
     # triangle error code
