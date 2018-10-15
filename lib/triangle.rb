@@ -1,3 +1,5 @@
+require 'pry'
+
 class Triangle
   # triangle code
 
