@@ -19,6 +19,7 @@ class Triangle
         :scalene
       end
     else
+      binding.pry
       raise TriangleError
     end
   end
