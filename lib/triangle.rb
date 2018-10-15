@@ -12,6 +12,8 @@ class Triangle
     if @sides.all?{|side| side >=0}
       if @sides.all?{|side| side==@sides[0]}
         :equilateral
+      elsif @sides[1]==@sides[2]
+        :isosceles
       end
     elsif
       raise TriangleError
