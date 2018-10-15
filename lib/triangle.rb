@@ -13,7 +13,7 @@ class Triangle
     if @sides.all?{|side| side >=0} || @sides[0]+@sides[1] > @sides[2]
       if @sides.all?{|side| side==@sides[0]}
         :equilateral
-      elsif @side[0]==@side[1] || @side[0]==@side[2] || @side[1]==@side[2]
+      elsif @sides[1]==@sides[2]
         :isosceles
       end
     else
