@@ -12,7 +12,7 @@ class Triangle
   end
 
   def kind
-    if @sides.all?{|side| side >=0} || @sides[0]+@sides[1] > @sides[2]
+    if @sides.all?{|side| side >0} || @sides[0]+@sides[1] > @sides[2]
       if @sides.all?{|side| side==@sides[0]}
         :equilateral
       elsif @sides[1]==@sides[2]
