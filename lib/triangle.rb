@@ -9,8 +9,8 @@ class Triangle
   end
 
   def kind
-    if sides.all?{|side| side >=0}
-      if sides.all?{|side| side==@side}
+    if @sides.all?{|side| side >=0}
+      if @sides.all?{|side| side==@side}
         :equilateral
       end
     elsif
