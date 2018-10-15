@@ -10,6 +10,9 @@ class Triangle
 
   def kind
     if sides.all?{|side| side >=0}
+      if sides.all?{|side| side==@side}
+        :equilateral
+      end
     elsif
       raise TriangleError
     end
