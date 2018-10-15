@@ -15,7 +15,7 @@ class Triangle
       elsif 
         :isosceles
       end
-    els
+    else
       raise TriangleError
     end
   end
