@@ -15,8 +15,9 @@ class Triangle
         :equilateral
       elsif @sides[1]==@sides[2]
         :isosceles
-    elsif @sides[0]!=@sides[1] && @sides[1]!=@sides[2]
+      elsif @sides[0]!=@sides[1] && @sides[1]!=@sides[2]
         :scalene
+      end
     else
       raise TriangleError
     end
